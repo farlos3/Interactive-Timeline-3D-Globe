@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useLoader } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars, Line } from "@react-three/drei";
 import { TextureLoader } from "three";
 import { useRef, useState, useEffect } from "react";
@@ -19,7 +19,7 @@ const Globe = () => {
 
   return (
     <Canvas camera={{ position: [0, 0, 5] }}>
-      <Stars radius={100} depth={50} count={400} factor={4} />
+      <Stars radius={80} depth={80} count={500} factor={3} />
 
       {texture && (
         <mesh ref={globeRef} rotation={[0.4, 0, 0.2]}>
